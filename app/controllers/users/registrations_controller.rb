@@ -1,5 +1,7 @@
 module Users
   class RegistrationsController < Devise::RegistrationsController
+    before_action :configure_permitted_parameters
+
     def create
       build_resource(sign_up_params)
       resource.assign_secret_code(params[:secret_code])
@@ -20,6 +22,12 @@ module Users
         set_minimum_password_length
         respond_with resource
       end
+    end
+
+    protected
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
     end
   end
 end
