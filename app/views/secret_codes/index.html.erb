@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+  <div class="col-sm-4">
+    <%= form_tag secret_codes_path do %>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <%= submit_tag 'Generate codes', class: 'btn btn-outline-secondary' %>
+        </div>
+        <%= select_tag :quantity, options_for_select([1, 10, 20, 50, 100], 10), class: 'form-control' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Code</th>
+        <th scope="col">User</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @secret_codes.each do |s| %>
+        <tr>
+          <th scope="row"><%= s.id %></th>
+          <td><%= s.code %></td>
+          <td><%= s.user.present? ? s.user.email : '-' %></td>
+        </tr>
+      <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>
