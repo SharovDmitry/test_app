@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is test app for engineer.ai
 
-Things you may want to cover:
+http://engineer-test-app.herokuapp.com
 
-* Ruby version
+admin credentials:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - email: admin@example.com
+ - password: password
