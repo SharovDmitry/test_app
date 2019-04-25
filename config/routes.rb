@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     post 'sign_up', to: 'users/registrations#create', as: 'user_registration'
   end
 
+  root to: 'home#index'
+
   resources :secret_codes, only: [:index, :create]
 end

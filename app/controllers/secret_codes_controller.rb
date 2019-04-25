@@ -1,4 +1,5 @@
 class SecretCodesController < ApplicationController
+  authorize_resource
 
   def index
     @secret_codes = SecretCode.includes(:user)

@@ -53,5 +53,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'activerecord-import'
 gem 'bootstrap', '~> 4.3.1'
+gem 'cancancan'
 gem 'devise', '~> 4.4'
 gem 'devise-bootstrap-views', '~> 1.0'
